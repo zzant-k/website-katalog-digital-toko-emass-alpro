@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Explore Horizons</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <div class="login-wrapper">
+        <div class="info-side">
+            <div class="logo">
+                <span class="logo-text-travel"></span>
+                <span class="logo-icon"></span>
+            </div>
+            <h1>YOUR GOLD<br> START HERE</h1>
+            <p class="tagline">“Where value becomes timeless.”.</p>
+            <p class="description">A place where every choice leads to lasting elegance and genuine worth. Your journey to trusted, high-quality gold begins right here..</p>
+        </div>
+
+        <div class="form-side">
+            <div class="login-card">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="********" required>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="signin-btn">SIGN IN</button>
+                    
+                    <div class="separator">
+                        <hr><span>or</span><hr>
+                    </div>
+                    
+                    <button type="button" class="google-signin-btn">
+                        Sign in with Google
+                    </button>
+
+                    <p class="register-text"><a href="#">Create an Account</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

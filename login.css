@@ -1,0 +1,323 @@
+/* Font dan Reset Dasar */
+
+/* iOS Font Embed */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* Default background */
+    overflow: hidden; /* Mencegah scroll saat background diatur */
+}
+
+/* Background Image dengan efek blur */
+.background-image {
+    position: fixed; /* 1. Agar gambar tetap di tempat meski di-scroll */
+    top: 0;          /* 2. Mulai dari sudut kiri atas */
+    left: 0;
+    width: 100%;     /* 3. Lebar 100% dari viewport */
+    height: 100%;    /* 4. Tinggi 100% dari viewport */
+    
+    /* 5. Pengaturan gambar itu sendiri */
+    background: url('dragon.jpg') no-repeat center center; 
+    
+    /* 6. PROPERTI KUNCI: Menjamin gambar menutupi seluruh elemen */
+    background-size: cover; 
+    
+    filter: blur(8px); 
+    z-index: -2;
+}
+
+.background-image ::before{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Container utama yang membatasi area login */
+.login-wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1000px; /* Ukuran maksimal container */
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    /* Border lembut dan shadow */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 2);
+    border-radius: 10px;
+}
+
+/* KIRI: Area Informasi/Branding */
+.info-side {
+    flex: 1;
+    padding: 40px;
+    margin-right:-20px;
+    margin-top:-50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    /* Menerapkan gambar asli tanpa blur di sisi kiri */
+    background: url('2.jpg') no-repeat center center;
+    background-size: cover;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.info-side::before {
+    content: '';
+    margin-right:-85px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%; /* Menutup hanya sisi kiri */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay gelap untuk teks lebih jelas */
+    z-index: 0;
+}
+
+.info-side > * {
+    position: relative;
+    z-index: 1;
+    margin-left:40px;
+}
+
+
+.logo {
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+}
+
+
+
+.logo-text-travel {
+    font-weight: 300;
+    margin-right: 5px;
+}
+
+h1 {
+    font-family: "Gloock", serif;
+    background: linear-gradient(135deg, #FFD700 0%, #E5C45A 40%, #A67C00 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+
+
+.tagline {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 0.9em;
+    font-weight: 300;
+    max-width: 80%;
+}
+
+/* KANAN: Area Formulir dan Glassmorphism */
+.form-side {
+    margin-right:-100px;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Background transparan */
+    backdrop-filter: blur(15px); /* Efek KACA BURAM (Glassmorphism) */
+    -webkit-backdrop-filter: blur(15px); /* Dukungan Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.login-card {
+    margin-left:-145px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    width: 120%;
+    padding: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9); /* Input hampir putih solid */
+    border-radius: 10px;
+    font-size: 1em;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.input-group input:focus {
+        border-color: #ffcc00; /* warna emas */
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.7);
+
+}
+
+.forgot-password {
+    margin-bottom:-20px;
+    color: #fff;
+    font-size: 0.85em;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color :blue;
+}
+
+.signin-btn {
+    width: 120%;
+    padding: 12px;
+    
+    background: linear-gradient(135deg, #ff4d4d, #ff9900);
+
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s;
+    margin-bottom: 18px;
+}
+
+.signin-btn:hover {
+    opacity: 0.9;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.separator hr {
+    margin-left:40px;
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.separator span {
+    margin-left:50px;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.google-signin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.google-signin-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.register-text {
+    font-family: -apple-system, "SF Pro Display", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.register-text a {
+    padding-left:50px;
+    color :#ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+    color :#ed4126;
+    transition: 0.2as ease-in-out;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .info-side {
+        width: 100%;
+        height: 250px; /* Tinggi tetap di mobile */
+    }
+
+    .info-side::before {
+        width: 100%; /* Overlay menutupi seluruh background info */
+    }
+
+    .form-side {
+        width: 100%;
+        padding: 30px 20px;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+}
