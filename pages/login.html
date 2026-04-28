@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Emas</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Gloock&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/pages/login.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <div class="login-wrapper">
+        <div class="info-side">
+            <div class="logo">
+                <!-- Logo text or icon can go here -->
+            </div>
+            <h1>YOUR GOLD<br> START HERE</h1>
+            <p class="tagline">“Where value becomes timeless.”</p>
+            <p class="description">A place where every choice leads to lasting elegance and genuine worth. Your journey to trusted, high-quality gold begins right here.</p>
+        </div>
+
+        <div class="form-side">
+            <div class="login-card">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="********" required>
+                        <a href="#" class="forgot-password" style="color: white; font-size: 0.8rem; margin-top: 5px; display: block;">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="signin-btn">SIGN IN</button>
+                    
+                    <div class="separator">
+                        <hr><span>or</span><hr>
+                    </div>
+                    
+                    <button type="button" class="google-signin-btn">
+                        Sign in with Google
+                    </button>
+
+                    <p style="text-align: center; margin-top: 15px; color: white; font-size: 0.9rem;">
+                        <a href="#" style="color: white; font-weight: 700;">Create an Account</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

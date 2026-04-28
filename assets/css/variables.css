@@ -1,0 +1,27 @@
+:root {
+    /* Colors */
+    --primary-text-color: #1A1A1A;
+    --secondary-text-color: #4A4A4A;
+    --border-color: #E0E0E0;
+    --line-color: #d9d9d9;
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #F8F9FA;
+    --third-bg-color: #F5F3FE;
+    --primary-icon-color: #5e17eb;
+    --primary-icon-hover: #5d51e8;
+    --accent-color: #db2432;
+    --accent-hover: #B71C1C;
+    --gold-color: #D4AF37;
+    --dark-bg: #0F0F0F;
+
+    /* Spacing & Sizing */
+    --section-padding: 6em 0;
+    --item-border-radius: 0.7rem;
+    --container-width: 1200px;
+
+    /* Fonts */
+    --font-main: "Montserrat", sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+    --font-accent: "Science Gothic", sans-serif;
+    --font-stack: "Stack Sans Text", sans-serif;
+}

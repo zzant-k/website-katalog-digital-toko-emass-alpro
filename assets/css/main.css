@@ -1,0 +1,144 @@
+@import "variables.css";
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--primary-bg-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: var(--primary-text-color);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--primary-text-color);
+    font-family: var(--font-main);
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+}
+
+span, label, li {
+    color: var(--secondary-text-color);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Layout */
+.main-container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 100px 0; /* Consistent vertical spacing */
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        padding: 0 1.5rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* Section Common */
+.section-title {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pre-title {
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: var(--secondary-text-color);
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 1rem;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: block;
+}
+
+.pre-title::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Grid System */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 2rem;
+    background: white;
+    border: 1.5px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /* More modern rounded pill */
+    font-weight: 600;
+    font-size: 0.95rem;
+    gap: 8px;
+}
+
+.btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+/* TradingView Widget */
+.chart {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tradingview-widget-container {
+    margin: 0 auto;
+    width: 100% !important;
+    background: var(--dark-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}

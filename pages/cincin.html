@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cincin 5 Gram - Toko Emas</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages/product.css">
+</head>
+<body>
+    <!-- Navbar Container -->
+    <header id="navbar-container"></header>
+
+    <main class="main-container">
+        <!-- Product Detail Section -->
+        <section class="product-container">
+            <div class="product-image-side">
+                <img src="../assets/img/Gemini_Generated_Image_girlj8girlj8girl.png" alt="Cincin 5 Gram">
+            </div>
+
+            <div class="product-info-side">
+                <h1>Cincin 5 Gram</h1>
+                <p class="product-meta">Habis | Terjual 2,7RB+<br>Stok Tersedia: 5</p>
+                <p class="product-price">Rp.10.000.000</p>
+
+                <div class="quantity-control">
+                    <label>Jumlah</label>
+                    <div class="quantity-wrapper">
+                        <button class="minus">-</button>
+                        <span class="current-quantity">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button class="btn btn-cart">
+                        <span>🛒 Keranjang</span>
+                    </button>
+                    <button class="btn btn-buy">
+                        Beli Sekarang 
+                    </button>
+                </div>
+
+                <div class="additional-info">
+                    <h4>Informasi Produk</h4>
+                    <p>Kadar : 999.9</p>
+                    <p>Dimensi : 13 x 8 x 0,25 mm</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repeated Sections (Optional, keeping them as they were in original) -->
+        <!-- Note: In a real app, these would be separate or simplified -->
+    </main>
+
+    <!-- Overlays -->
+    <div id="overlay-keranjang" class="overlay">
+        <div id="popup-keranjang" class="popup">
+            <span class="close-btn">&times;</span>
+            <h4>BERHASIL</h4>
+            <img src="../assets/img/keranjang-Photoroom.png" class="popup-img" alt="Success">
+            <p>Berhasil tambahkan produk ke keranjang</p>
+        </div>
+    </div>
+
+    <div id="overlay-beli" class="overlay">
+        <div id="popup-beli" class="popup">
+            <span class="close-btn">&times;</span>
+            <h4>BERHASIL</h4>
+            <img src="../assets/img/ceklis.webp" class="popup-img" alt="Success">
+            <p>Terimakasih sudah berbelanja!</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../utils/components-loader.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/product.js"></script>
+</body>
+</html>
